@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout – ELORA Luxury Fragrances</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Tenor+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <a href="index.html">
+        <div class="logo-mark">✦</div>
+        <span class="logo-text">ELORA</span>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Collection</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</nav>
+
+<!-- CHECKOUT -->
+<section class="checkout-section">
+  <div class="checkout-grid">
+
+    <!-- LEFT: Form -->
+    <div class="checkout-form-col">
+      <div class="checkout-steps">
+        <div class="step active">1. Delivery</div>
+        <div class="step-div">→</div>
+        <div class="step" id="step2">2. Payment</div>
+        <div class="step-div">→</div>
+        <div class="step" id="step3">3. Confirm</div>
+      </div>
+
+      <!-- Step 1 -->
+      <div id="formStep1">
+        <h2 class="checkout-title">Delivery Details</h2>
+        <div class="checkout-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" id="firstName" placeholder="Priya" />
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" id="lastName" placeholder="Sharma" />
+            </div>
+          </div>
+          <div class="form-group full">
+            <label>Email Address *</label>
+            <input type="email" id="email" placeholder="priya@email.com" />
+          </div>
+          <div class="form-group full">
+            <label>Phone Number *</label>
+            <input type="tel" id="phone" placeholder="+91 98765 43210" />
+          </div>
+          <div class="form-group full">
+            <label>Street Address *</label>
+            <input type="text" id="address" placeholder="Flat 12, Rose Apartments, MG Road" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>City *</label>
+              <input type="text" id="city" placeholder="Chennai" />
+            </div>
+            <div class="form-group">
+              <label>State *</label>
+              <select id="state">
+                <option value="">Select State</option>
+                <option>Tamil Nadu</option><option>Maharashtra</option><option>Karnataka</option>
+                <option>Delhi</option><option>Kerala</option><option>Andhra Pradesh</option>
+                <option>Telangana</option><option>Gujarat</option><option>Rajasthan</option>
+                <option>West Bengal</option><option>Uttar Pradesh</option><option>Punjab</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group full">
+            <label>PIN Code *</label>
+            <input type="text" id="pincode" placeholder="600 001" maxlength="6" />
+          </div>
+          <button class="btn-primary full-width" id="toStep2">Continue to Payment →</button>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div id="formStep2" style="display:none;">
+        <h2 class="checkout-title">Payment Details</h2>
+        <div class="checkout-form">
+          <div class="payment-options">
+            <label class="payment-opt selected" id="payUPI">
+              <input type="radio" name="payment" value="upi" checked hidden />
+              <span class="pay-icon">📱</span>
+              <div><strong>UPI</strong><p>PhonePe, GPay, Paytm</p></div>
+              <span class="pay-check">✓</span>
+            </label>
+            <label class="payment-opt" id="payCard">
+              <input type="radio" name="payment" value="card" hidden />
+              <span class="pay-icon">💳</span>
+              <div><strong>Card</strong><p>Credit / Debit Card</p></div>
+              <span class="pay-check">✓</span>
+            </label>
+            <label class="payment-opt" id="payCOD">
+              <input type="radio" name="payment" value="cod" hidden />
+              <span class="pay-icon">💵</span>
+              <div><strong>Cash on Delivery</strong><p>Pay when delivered</p></div>
+              <span class="pay-check">✓</span>
+            </label>
+          </div>
+
+          <div id="upiFields">
+            <div class="form-group full">
+              <label>UPI ID</label>
+              <input type="text" placeholder="yourname@upi" />
+            </div>
+          </div>
+          <div id="cardFields" style="display:none;">
+            <div class="form-group full">
+              <label>Card Number</label>
+              <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Expiry</label>
+                <input type="text" placeholder="MM/YY" maxlength="5" />
+              </div>
+              <div class="form-group">
+                <label>CVV</label>
+                <input type="text" placeholder="123" maxlength="3" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label>Promo Code</label>
+            <div class="promo-row">
+              <input type="text" id="promoCode" placeholder="Enter code (try ELORA10)" />
+              <button class="btn-ghost btn-sm" id="applyPromo">Apply</button>
+            </div>
+            <div id="promoMsg"></div>
+          </div>
+
+          <div class="btn-row">
+            <button class="btn-ghost" id="backStep1">← Back</button>
+            <button class="btn-primary" id="toStep3">Place Order →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Confirmation -->
+      <div id="formStep3" style="display:none;">
+        <div class="order-success">
+          <div class="success-icon">✦</div>
+          <h2>Order Placed!</h2>
+          <p>Thank you for choosing ELORA. Your luxury fragrance is being lovingly prepared and will arrive in 3–5 business days.</p>
+          <div id="orderSummaryConfirm"></div>
+          <div class="success-actions">
+            <a href="products.html" class="btn-primary">Continue Shopping</a>
+            <a href="index.html" class="btn-ghost">Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Order Summary -->
+    <div class="order-summary-col">
+      <div class="order-summary">
+        <h3>Your Order</h3>
+        <div id="orderItem" class="order-item">
+          <!-- Populated by JS -->
+        </div>
+        <div class="order-qty">
+          <span>Quantity</span>
+          <div class="qty-control">
+            <button id="qtyMinus">−</button>
+            <span id="qtyVal">1</span>
+            <button id="qtyPlus">+</button>
+          </div>
+        </div>
+        <div class="order-breakdown">
+          <div class="ob-row"><span>Subtotal</span><span id="subtotal">₹499</span></div>
+          <div class="ob-row"><span>Shipping</span><span class="free-tag">FREE</span></div>
+          <div class="ob-row discount-row" id="discountRow" style="display:none;"><span>Discount</span><span id="discountAmt" class="discount-val">-₹0</span></div>
+          <div class="ob-row total-row"><span>Total</span><span id="orderTotal">₹499</span></div>
+        </div>
+        <div class="trust-badges">
+          <div class="tb">🔒 Secure Checkout</div>
+          <div class="tb">🚚 Free Delivery</div>
+          <div class="tb">🔄 Easy Returns</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="logo-mark">✦</div>
+        <span>ELORA</span>
+      </div>
+      <p>Luxury fragrances for the modern soul.</p>
+    </div>
+    <div class="footer-col contact-col">
+      <h4>Contact Us</h4>
+      <div class="contact-item">
+        <span>📍</span>
+        <p>42, Perfumers Lane, Anna Nagar<br />Chennai – 600 040, Tamil Nadu, India</p>
+      </div>
+      <div class="contact-item"><span>📞</span><p>+91 98765 43210</p></div>
+      <div class="contact-item"><span>✉️</span><p>hello@elorafragrance.in</p></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 ELORA Fragrance House. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

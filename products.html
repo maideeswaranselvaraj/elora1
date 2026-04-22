@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collection – ELORA Luxury Fragrances | Shop All Perfumes ₹499</title>
+  <meta name="description" content="Shop ELORA's full fragrance collection. 7 luxury eau de parfums starting at ₹499. Rose Noir, Bleu Mystère, Velvet Dusk, and more. Free shipping across India." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Tenor+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <a href="index.html">
+        <div class="logo-mark">✦</div>
+        <span class="logo-text">ELORA</span>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Collection</a></li>
+      <li><a href="index.html#bestsellers">Best Sellers</a></li>
+      <li><a href="index.html#reviews">Reviews</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="products.html" class="btn-nav">Shop Now</a>
+    </div>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="products.html">Collection</a>
+    <a href="index.html#bestsellers">Best Sellers</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <div class="hero-orb orb1"></div>
+    <div class="hero-orb orb2"></div>
+  </div>
+  <p class="section-eyebrow">✦ Handcrafted Luxury</p>
+  <h1>Our <em>Collection</em></h1>
+  <p>Seven fragrances. Seven stories. One for every version of you.</p>
+</section>
+
+<!-- ADMIN PANEL -->
+<section class="admin-panel" id="adminPanel">
+  <div class="admin-header">
+    <h3>🛠 Product Management</h3>
+    <button class="btn-primary btn-sm" id="toggleAdmin">Manage Products</button>
+  </div>
+  <div class="admin-body" id="adminBody" style="display:none;">
+    <h4 id="formTitle">Add New Product</h4>
+    <div class="admin-form" id="adminForm">
+      <input type="hidden" id="editId" />
+      <div class="form-row">
+        <div class="form-group">
+          <label>Product Name</label>
+          <input type="text" id="pName" placeholder="e.g. Rose Noir" required />
+        </div>
+        <div class="form-group">
+          <label>Fragrance Family</label>
+          <input type="text" id="pFamily" placeholder="e.g. Floral Oriental" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Price (₹)</label>
+          <input type="number" id="pPrice" value="499" required />
+        </div>
+        <div class="form-group">
+          <label>Emoji / Icon</label>
+          <input type="text" id="pEmoji" placeholder="e.g. 🌹" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Gradient Colors (CSS)</label>
+          <input type="text" id="pGradient" placeholder="e.g. #c9a96e,#8b5e3c" />
+        </div>
+        <div class="form-group">
+          <label>Notes</label>
+          <input type="text" id="pNotes" placeholder="e.g. Bergamot, Rose, Oud" />
+        </div>
+      </div>
+      <div class="form-group full">
+        <label>Description</label>
+        <textarea id="pDesc" rows="3" placeholder="Short product description..."></textarea>
+      </div>
+      <div class="form-actions">
+        <button class="btn-primary" id="saveProduct">Save Product</button>
+        <button class="btn-ghost btn-sm" id="cancelEdit" style="display:none;">Cancel</button>
+      </div>
+    </div>
+    <div id="adminMsg" class="admin-msg"></div>
+  </div>
+</section>
+
+<!-- PRODUCTS GRID -->
+<section class="products-section">
+  <div class="products-filter">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="floral">Floral</button>
+    <button class="filter-btn" data-filter="woody">Woody</button>
+    <button class="filter-btn" data-filter="fresh">Fresh</button>
+    <button class="filter-btn" data-filter="oriental">Oriental</button>
+  </div>
+  <div class="products-grid" id="productsGrid">
+    <!-- Rendered by JS -->
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="logo-mark">✦</div>
+        <span>ELORA</span>
+      </div>
+      <p>Luxury fragrances handcrafted for the modern soul. Wear your story.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">📷</a>
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="Twitter">🐦</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Collection</a></li>
+      </ul>
+    </div>
+    <div class="footer-col contact-col">
+      <h4>Contact Us</h4>
+      <div class="contact-item">
+        <span>📍</span>
+        <p>42, Perfumers Lane, Anna Nagar<br />Chennai – 600 040, Tamil Nadu, India</p>
+      </div>
+      <div class="contact-item">
+        <span>📞</span>
+        <p>+91 98765 43210</p>
+      </div>
+      <div class="contact-item">
+        <span>✉️</span>
+        <p>hello@elorafragrance.in</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 ELORA Fragrance House. All rights reserved. Made with ♥ in India.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
